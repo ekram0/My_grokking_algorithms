@@ -9,7 +9,6 @@ namespace My_Implement.IntroductionToAlgorithms
         {
             var Low = 0;
             var High = list.Length - 1;
-            if (!list.Contains(item)) return -1;
             while (Low <= High)
             {
                 int mid = (Low + High) / 2;
@@ -25,13 +24,13 @@ namespace My_Implement.IntroductionToAlgorithms
             return -1;
         }
 
-        static void Main(string[] args)
-        {
-            var data = Enumerable.Range(0, 1000).ToArray();
-            var item = 804;
-            var target = binarySearch(data, item);
-            Console.WriteLine(target);
-            Console.ReadKey();
-        }
+        //static void Main(string[] args)
+        //{
+        //    var data = Enumerable.Range(0, 1000).ToArray();
+        //    var item = 8040;
+        //    var target = binarySearch(data, item);
+        //    Console.WriteLine(target);
+        //    Console.ReadKey();
+        //}
     }
 }

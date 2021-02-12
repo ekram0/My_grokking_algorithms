@@ -16,9 +16,9 @@ namespace GrokkinAlgorithemsTest
             var item = 3;
             //Arrange
             var result = BinarySearch.binarySearch(data, item);
-            var expected = 3;
+            var Expected = Array.FindIndex(data, x => x == item);
             //Assert
-            Assert.Equal(expected, result);
+            Assert.Equal(Expected, result);
         }
         [Fact]
         public void IsEqual_ValueOutRange_returnTrue()
