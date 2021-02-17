@@ -54,13 +54,13 @@ namespace My_Implement.SelectionSort
 
             return list;
         }
-        static void Main(string[] args)
-        {
-            var list = new List<int>() { 1, 5, 3, 9, 10, 20, -1 };
-            var StringList = new List<string>() { "India", "Egypt", "England", "Germany", "Gana" };
-            foreach (var item in GenericSelectionSort(StringList))
-                Console.WriteLine(item);
-            Console.ReadKey();
-        }
+        //static void Main(string[] args)
+        //{
+        //    var list = new List<int>() { 1, 5, 3, 9, 10, 20, -1 };
+        //    var StringList = new List<string>() { "India", "Egypt", "England", "Germany", "Gana" };
+        //    foreach (var item in GenericSelectionSort(StringList))
+        //        Console.WriteLine(item);
+        //    Console.ReadKey();
+        //}
     }
 }
