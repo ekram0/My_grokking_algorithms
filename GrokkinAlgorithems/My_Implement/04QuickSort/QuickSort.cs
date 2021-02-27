@@ -38,28 +38,40 @@ namespace My_Implement.QuickSort
         {
             if (arr is null) return null;
             if (arr.Count() < 2) return arr;
-            var pivot = arr.FirstOrDefault();
+            var pivot = arr.ElementAt((int)(arr.Count() * 0.5));
             var less = arr.Skip(1).Where(i => i <= pivot);
             var greater = arr.Skip(1).Where(i => i > pivot);
             return quickSort(less).Union(new int []{ pivot}).Union(quickSort(greater));
         }
-        static void Main(string[] args)
-        {
-            var lst = new List<int> { 130,0,20,-32,258,50,5029,140 };
-            var result = SumByRecursion(lst);
-            var max = MaxValueByRecursion(lst);
-            var count = CountByRecursion(lst);
-            var GCD = GetGCD( 640, 1680);
-            var GCDList = GetGCDList(lst);
-            var SortedList = quickSort(lst).ToList();
 
-            Console.WriteLine(result);
-            Console.WriteLine(max);
-            Console.WriteLine(count );
-            Console.WriteLine(GCD);
-            Console.WriteLine(GCDList);
-            Console.WriteLine(String.Join(" ",quickSort(lst)));
-            Console.ReadKey();
+        public static IEnumerable<int> MultiplyTable(IEnumerable<int> lst)
+        {
+            var result = new List<int>();
+            if (!lst.Any()) return null ;
+            var val = lst.Take(1).FirstOrDefault() * MultiplyTable(lst.Skip(1)).FirstOrDefault();
+            result.Add(val);
+            return result;
         }
+
+        //static void Main(string[] args)
+        //{
+        //    var lst = new List<int> { 130,0,20,-32,258,50,5029,140 };
+        //    var lst2 = new List<int> { 1,2,3,4};
+        //    var result = SumByRecursion(lst);
+        //    var max = MaxValueByRecursion(lst);
+        //    var count = CountByRecursion(lst);
+        //    var GCD = GetGCD( 640, 1680);
+        //    var GCDList = GetGCDList(lst);
+        //    var SortedList = quickSort(lst).ToList();
+        //    var table = MultiplyTable(lst2);
+
+        //    Console.WriteLine(result);
+        //    Console.WriteLine(max);
+        //    Console.WriteLine(count );
+        //    Console.WriteLine(GCD);
+        //    Console.WriteLine(GCDList);
+        //    Console.WriteLine(String.Join(" ",quickSort(lst)));
+        //    Console.ReadKey();
+        //}
     }
 }
