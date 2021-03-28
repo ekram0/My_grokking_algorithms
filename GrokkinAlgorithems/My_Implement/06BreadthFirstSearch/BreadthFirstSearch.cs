@@ -39,21 +39,21 @@ namespace My_Implement.BreadthFirstSearch
 
        
 
-        static void Main(string[] args)
-        {
+        //static void Main(string[] args)
+        //{
 
-            var graph = new Dictionary<string, string[]>();
-            graph.Add("you", new[] { "alice", "bob", "claire" });
-            graph.Add("bob", new[] { "anuj", "peggy" });
-            graph.Add("alice", new[] { "peggy" });
-            graph.Add("claire", new[] { "thom", "jonny" ,"Mollm"});
-            graph.Add("anuj", Array.Empty<string>());
-            graph.Add("peggy", Array.Empty<string>());
-            graph.Add("thom", Array.Empty<string>());
-            graph.Add("jonny", Array.Empty<string>());
-            Search("you", graph);
-            Console.ReadKey();
-        }
+        //    var graph = new Dictionary<string, string[]>();
+        //    graph.Add("you", new[] { "alice", "bob", "claire" });
+        //    graph.Add("bob", new[] { "anuj", "peggy" });
+        //    graph.Add("alice", new[] { "peggy" });
+        //    graph.Add("claire", new[] { "thom", "jonny" ,"Mollm"});
+        //    graph.Add("anuj", Array.Empty<string>());
+        //    graph.Add("peggy", Array.Empty<string>());
+        //    graph.Add("thom", Array.Empty<string>());
+        //    graph.Add("jonny", Array.Empty<string>());
+        //    Search("you", graph);
+        //    Console.ReadKey();
+        //}
     }
 }
 
